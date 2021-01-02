@@ -38,5 +38,5 @@ The SAT problem need less math than factorisation or the "sudoku resolver" probl
 
 And to be honest this problem is my favourite one and I wished to try to resolve it.
 
-### First made the objects we'll need 
+### First make the objects we'll need 
 
