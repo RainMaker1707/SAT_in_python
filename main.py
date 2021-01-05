@@ -1,5 +1,5 @@
-from res.candidates import CandidateList, Candidate
-from res.members import Member
+from res.candidates import *
+from res.members import *
 from random import randint, getrandbits
 
 
@@ -14,7 +14,6 @@ def setup(member_nbr: int, candidate_nbr: int):
     """
     for x in range(candidate_nbr):
         Candidate()
-    members_list = []
     for y in range(member_nbr):
         this = Member()
         for i in range(randint(1, CandidateList.size())):
@@ -25,19 +24,12 @@ def setup(member_nbr: int, candidate_nbr: int):
             while {'candidate': temp, 'accept': (True or False)} in this.get_demands():
                 temp = CandidateList.get()[randint(0, CandidateList.size() - 1)]
             this.add_demand(temp, accept)
-        members_list.append(this)
-    return members_list
 
 
 if __name__ == "__main__":
     print("Run as main program")
-
-    members = setup(10, 100)
-
-    print("Candidate List size: " + str(CandidateList.size()))
-    print("Member List: ")
-    for member in members:
-        print(str(member))
+    setup(10, 100)
+    print(MemberList.pretty())
 
     # to remove one candidate from the demand list of one member
     # members[-1].remove_demand(members[-1].get_demands()[0].get('candidate'))
