@@ -8,7 +8,7 @@ They've a list of candidates and each members of
 the club can have demands like this candidates have to be accept
 or this one have to be refused.
 
-The problem is NP resolvable but P complexity check, basicly if 
+The problem is NP resolvable but P complexity check, basically if 
 u propose a list of new members from the candidates list it is simple to check if this list fit at least 
 one of each member demand.
 
