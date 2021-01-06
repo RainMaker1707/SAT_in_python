@@ -22,6 +22,10 @@ class Member:
                                                                                 len(self._demands)) \
                + "\n}"
 
+    @staticmethod
+    def reset_id():
+        Member._inner_id = 0
+
     # ----- getter and setter -----
 
     # getter
@@ -70,6 +74,9 @@ class Member:
 
 
 class MemberList:
+    """
+    MemberList has no constructor because it is used as a Singleton
+    """
     _inner = []
 
     def __str__(self):
@@ -127,8 +134,15 @@ class MemberList:
 
     @staticmethod
     def is_empty():
+        """
+        :return: True if the size of the list is equal to 0 False either
+        """
         return len(MemberList._inner) == 0
 
     @staticmethod
     def empty_list():
+        """
+        Method to empty the MemberList and reset the Member id
+        """
         MemberList._inner = []
+        Member.reset_id()

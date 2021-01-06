@@ -7,7 +7,7 @@ def setup(member_nbr: int, candidate_nbr: int):
     """
     This function will make a list of potential candidates and a list of member
     Each member has a random list of random demand
-    :non-param complexity: T(n^2)
+    :non-param complexity: Ω(member_nbr ^ candidate_nbr)
     :param member_nbr: number of member already registered in the 'club'
     :param candidate_nbr: number of candidates who wish join the 'club'
     :return: the list of member and each one list of demands

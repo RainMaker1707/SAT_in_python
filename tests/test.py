@@ -18,6 +18,15 @@ class TestSetupFunction(unittest.TestCase):
             self.assertEqual(MemberList.size(), member_nbr)
             self.assertEqual(CandidateList.size(), candidate_nbr)
 
+    def test_members_demands(self):
+        pass
+
+    def test_remove_demand(self):
+        pass
+
+    def test_insert_demand(self):
+        pass
+
 
 if __name__ == '__main__':
-    unittest.main(verbosity=2)
+    unittest.main()

@@ -7,8 +7,15 @@ class Candidate:
         Candidate._inner_id += 1
         CandidateList.append(self)
 
+    @staticmethod
+    def reset_id():
+        Candidate._inner_id = 0
+
 
 class CandidateList:
+    """
+    CandidateList has no constructor because it is used as a Singleton
+    """
     _inner = []
 
     def __str__(self):
@@ -57,4 +64,8 @@ class CandidateList:
 
     @staticmethod
     def empty_list():
+        """
+        Method to empty the CandidateList and reset the Candidate id
+        """
         CandidateList._inner = []
+        Candidate.reset_id()
