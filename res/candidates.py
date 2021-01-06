@@ -50,3 +50,11 @@ class CandidateList:
         :return: the size of the inner list or the number of candidates stored in the CandidateList
         """
         return len(CandidateList._inner)
+
+    @staticmethod
+    def is_empty():
+        return len(CandidateList._inner) == 0
+
+    @staticmethod
+    def empty_list():
+        CandidateList._inner = []

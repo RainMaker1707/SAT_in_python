@@ -124,3 +124,11 @@ class MemberList:
         :return: the size of the inner list or the number of members stored in the MemberList
         """
         return len(MemberList._inner)
+
+    @staticmethod
+    def is_empty():
+        return len(MemberList._inner) == 0
+
+    @staticmethod
+    def empty_list():
+        MemberList._inner = []
